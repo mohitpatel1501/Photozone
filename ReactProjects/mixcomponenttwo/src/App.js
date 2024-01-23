@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Add, {Sub} from './Calc.js';
 import {Component} from 'react';
