@@ -27,7 +27,7 @@ function Second(){
   return(
     <>
       <h3>Web Developement</h3>
-      <marquee behavior="scroll" width="50%" direction="left" height="180px" scrollamount="20">
+      <marquee behavior="scroll" width="50%" direction="left" height="180px" scrollamount="10">
       <img src={HTML} alt=" " height="150" width="150"></img>
       <img src={CSS} alt=" "  height="150" width="150"></img>
       <img src={JS}  alt=" " height="150" width="150"></img>
