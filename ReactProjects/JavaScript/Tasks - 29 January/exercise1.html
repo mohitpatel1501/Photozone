@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+
+<body>
+    <script>
+        function check(form) {
+            var email = form.uemail.value;
+            var password = form.upassword.value;
+
+            if (email == "a@b.com" && password == "abc123") {
+                document.getElementById("msg").innerHTML = "Login Successful";
+            }
+            else {
+                document.getElementById("msg").innerHTML = "Invalid username or password";
+            }
+        }
+
+    </script>
+    <form action="">
+        Email : <input type="email" name="uemail" id="" placeholder="Enter email" /><br />
+        Password : <input type="password" name="upassword" placeholder="Enter password" /><br />
+        <input type="submit" value="Submit" onclick="check(this.form); return false;" />
+    </form>
+    <p id="msg"></p>
+</body>
+
+</html>

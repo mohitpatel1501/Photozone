@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <script>
+        // Function with no argument and no return value
+        one = () =>{
+            document.write("Function one called");
+        }
+        one();
+
+        // Function with argument but no return value
+        two = (a,b) =>{
+            document.write("<br/> Adition of "+a+" and "+b+" is "+(a+b));
+        }
+        two(10,20);
+
+        // Function with no argument but return value
+        three = () =>{
+            return "<br/>Function three called";
+        }
+        var x=three();
+        document.write(x);
+
+        // Function with argument and return value both
+        four = (i,j) =>{
+            return "<br/>Subtraction of "+i+" and "+j+" is "+(i-j);
+        }
+        var y=four(25,25);
+        document.write(y);
+    </script>
+</body>
+</html>

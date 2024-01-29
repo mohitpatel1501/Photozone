@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+</head>
+<body>
+    <script>
+        function check(form){
+            var name=form.fname.value;
+            var surname=form.lname.value;
+            document.getElementById("msg").innerHTML ="You entered first name : "+name+" and last name : "+surname;
+        }
+    </script>
+    <form action="">
+        First Name : <input type="text" name="fname" id="" placeholder="Enter First Name" />
+        Last Name : <input type="text" name="lname" placeholder="Enter Last Name" />
+        <input type="submit" value="Submit Query" onclick="check(this.form); return false;" />
+    </form>
+    <p id="msg"></p>
+</body>
+</html>
