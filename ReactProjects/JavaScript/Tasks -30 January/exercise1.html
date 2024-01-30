@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 1 | 30 Jan</title>
+</head>
+
+<body>
+    <script>
+        mydata = {
+            "maharashtra": { "mumbai": { "city": "metro city", "metro": "yes" }, "population": "20 cr" },
+            "gujarat": ["AHMEDABAD", "SURAT", "RAJKOT"],
+            "rajasthan": ["AJMER", "JAISALMER", { "capital": "jaipur" }, ["MEWAD", "RJ", "INR"]]
+        }
+
+        // Print metro city
+        document.write(mydata["maharashtra"]["mumbai"]["city"]+"<br/>");
+
+        //Print jaipur
+        document.write(mydata["rajasthan"][2]["capital"]+"<br/>");
+
+        //Print Rajkot
+        document.write(mydata["gujarat"][2]+"<br/>");
+
+        //Print RJ
+        document.write(mydata["rajasthan"][3][1]+"<br/>");
+    </script>
+</body>
+
+</html>

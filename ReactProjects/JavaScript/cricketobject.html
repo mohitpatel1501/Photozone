@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Object data table</title>
+</head>
+<body>
+    <script>
+        var players = {
+                "virat":[25,15,7,12,65],
+                "rohit":[55,15,33,7,45],
+                "dhoni":[15,32,0,75,65],
+                "shikhar":[50,20,25,75,45],
+                "pant":[10,25,22,55,75],
+                "rahane":[15,25,55,45,0],
+            };
+
+            // Print total number of players
+            var count = Object.keys(players).length;
+            document.write("Total number of players : "+count+ "<br/>");
+
+            // Print total number of matches
+            var lencount =players["virat"].length;
+            document.write("Total number of matches : "+lencount+"<br/>");
+
+            // Print name of all players
+            for(var i in players){
+                document.write(i +"<br/>");
+            }
+    </script>
+    <table border="1">
+        <tr>
+            <th>Player</th>
+            <th>Match 1</th>
+            <th>Match 2</th>
+            <th>Match 3</th>
+            <th>Match 4</th>
+            <th>Match 5</th>
+        </tr>
+        <script>
+            for(var i in players){
+                var key=i;
+                var val=players[i];
+                document.write("<tr>");
+                document.write("<td>"+key+"</td>");
+
+                for(i=0;i<lencount;i++){
+                    if(val[i]==0){
+                        document.write("<td><font style='color :red'>"+val[i]+"</font></td>");
+                    }
+                    else if(val[i]>=30 && val[i]<=49){
+                        document.write("<td><font style='color :green'>"+val[i]+"</font></td>");
+                    }
+                    else if(val[i]>=50){
+                        document.write("<td><mark>"+val[i]+"</mark></td>");
+                    }
+                    else{
+                        document.write("<td>"+val[i]+"</td>");
+                    }
+                }
+                document.write("</tr>");
+            }
+        </script>
+    </table>
+</body>
+</html>

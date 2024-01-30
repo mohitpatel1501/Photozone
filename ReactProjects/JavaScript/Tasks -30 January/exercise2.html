@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-2 | 30 Jan</title>
+</head>
+
+<body>
+    <script>
+        mydata = {
+            "category": [{ "A": "FIRST", "package": { "data": "2lacs" } },
+            { "B": "Second", "data": { "new": [100] } }, { "C": "Third", "Tests": [45, 75, 25] }]
+        };
+
+        //Print 2lacs
+        document.write(mydata["category"][0]["package"]["data"]+"<br/>");
+
+        //Print 25
+        document.write(mydata["category"][2]["Tests"][2]+"<br/>");
+
+        //Print 100
+        document.write(mydata["category"][1]["data"]["new"][0]+"<br/>");
+    </script>
+</body>
+
+</html>

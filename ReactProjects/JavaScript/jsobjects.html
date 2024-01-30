@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects</title>
+</head>
+
+<body>
+    <script>
+        var mydata = { "Ahmedabad": 250, "Surat": 350, "Rajkot": 450 };
+        // Printing entire Object
+        document.write(mydata + "<br/>");
+
+        // Printing all main keys
+        var keys = Object.keys(mydata);
+        document.write(keys + "<br />");
+
+        // Printing length of object
+        var len = Object.keys(mydata).length;
+        document.write(len + "<br />");
+
+        // Printing values of object
+        var values = Object.values(mydata);
+        document.write(values + "<br />");
+
+        // Printing key and value both
+        var info = Object.entries(mydata);
+        document.write(info + "<br />");
+
+        // Printing 450
+        document.write(mydata["Rajkot"] + "<br/>");
+
+        var mydata1 = { "Ahmedabad": 250, "Surat": [350, 400, 1], "Rajkot": 450 };
+        // Print 400
+        document.write(mydata1["Surat"][1] + "<br/>");
+
+        var mydata2 = {
+            "Ahmedabad": [{ "date": "28 Jan 2024", "cases": 15 }, { "date": "29 Jan 2024", "cases": 25 }, { "date": "30 Jan 2024", "cases": 35 }],
+                "Surat": [350, 400, 1], "Rajkot": 450
+        };
+        // Print 30 Jan 2024
+        document.write(mydata2["Ahmedabad"][2]["date"] +"<br/>");
+        // Print 15
+        document.write(mydata2["Ahmedabad"][0]["cases"]+ "<br/>");
+    </script>
+</body>
+
+</html>
