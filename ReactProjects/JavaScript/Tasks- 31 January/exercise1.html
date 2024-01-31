@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-1 | 31 January</title>
+</head>
+<body>
+    <script>
+        var mydata = [{"states":["GUJARAT","RAJASTHAN",{"PORTION":"WEST INDIA"},{"LANGUAGES":["GUJARATI","MARWADI",["HINDI","ENGLISH"]]}]},
+            {"CODES":{"GUJARAT":"GJ","RAJASTHAN":"RJ"}},["7.07 CR","8.5 CR"]];
+
+        // PRINT TOTAL NUMBER OF MAIN KEYS
+        document.write(mydata.length+"<br/>");
+
+        // Print name of all main keys
+        document.write(Object.keys(mydata)+"<br/>");
+
+        // Print GJ
+        document.write(mydata[1]["CODES"]["GUJARAT"]+"<br/>");
+
+        // Print GUJARAT
+        document.write(mydata[0]["states"][0] +"<br />");
+
+        // Print MARWADI
+        document.write(mydata[0]["states"][3]["LANGUAGES"][1]+"<br/>");
+        
+        // Print ENGLISH
+        document.write(mydata[0]["states"][3]["LANGUAGES"][2][1]+"<br/>");
+
+        // Print WEST INDIA
+        document.write(mydata[0]["states"][2]["PORTION"]+"<br/>");
+
+        // Print 7.07 CR
+        document.write(mydata[2][0]);
+    </script>
+</body>
+</html>

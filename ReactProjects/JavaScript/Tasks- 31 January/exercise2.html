@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-2 | 31 January</title>
+</head>
+<body>
+    <script>
+        var result = {
+            "students": ["RAVI", "NAYAN", "RAJ", "KISHAN"],
+            "subjects": ["MATHS", "ENGLISH", "SCIENCE"],
+            "maths_marks": [55, 75, 28, 95],
+            "english_marks": [88, 78, 99, 91],
+            "science_marks": [72, 68, 54, 66]
+        }
+    </script>
+    <table border="1">
+        <tr>
+            <th>STUDENT</th>
+            <th>MATHS</th>
+            <th>ENGLISH</th>
+            <th>SCIENCE</th>
+        </tr>
+        <script>
+                    for(i=0;i<result.students.length;i++){
+                        document.write("<tr>");
+                        document.write("<td>"+result.students[i]+"</td><td>"+result.maths_marks[i]+"</td><td>"+result.english_marks[i]+"</td><td>"+result.science_marks[i]+"</td>");
+                        document.write("</tr>");
+                    }
+        </script>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-3 | 31 January</title>
+</head>
+<body>
+    <script>
+        var mydata = { "time": { "updated": "Jan 30, 2024 21:17:27 UTC", "updatedISO": "2024-01-30T21:17:27+00:00", "updateduk": "Jan 30, 2024 at 21:17 GMT" }, "disclaimer": "This data was produced from the CoinDesk Bitcoin Price Index (USD). Non-USD currency data converted using hourly conversion rate from openexchangerates.org", "chartName": "Bitcoin", "bpi": { "USD": { "code": "USD", "symbol": "&#36;", "rate": "43,645.996", "description": "United States Dollar", "rate_float": 43645.996 }, "GBP": { "code": "GBP", "symbol": "&pound;", "rate": "34,377.943", "description": "British Pound Sterling", "rate_float": 34377.9433 }, "EUR": { "code": "EUR", "symbol": "&euro;", "rate": "40,241.085", "description": "Euro", "rate_float": 40241.0846 } } };
+
+        // Print total number of main keys
+        document.write(Object.keys(mydata).length+"<br/>");
+
+        // Print name of all main keys
+        document.write(Object.keys(mydata)+"<br/>");
+
+        // Print Bitcoin price in USD
+        document.write(mydata.bpi.USD.rate);
+    </script>
+</body>
+
+</html>
