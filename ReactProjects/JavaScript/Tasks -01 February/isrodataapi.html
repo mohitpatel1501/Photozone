@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISRO Data | 01 February</title>
+</head>
+<body>
+    <script>
+        async function isrodata(){
+            var mydata=await(await fetch("https://isro.vercel.app/api/spacecrafts")).json();
+            document.write("<table border='1'>");
+            document.write("<tr><th>ID</th><th>NAME OF SPACECRAFT</th></tr>");
+            for(var i=0;i<mydata.spacecrafts.length;i++){
+                document.write("<tr>");
+                    document.write("<td>"+mydata.spacecrafts[i]["id"]+"</td><td>"+mydata.spacecrafts[i]["name"]+"</td>");
+                document.write("</td>");
+            }
+            document.write("</table>");
+        }
+        isrodata();
+    </script>
+</body>
+</html>

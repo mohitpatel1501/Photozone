@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid API 2 | 01 February</title>
+</head>
+<body>
+    <script>
+        async function coviddata(){
+            var mydata=await(await fetch("https://data.covid19india.org/data.json")).json();
+            document.write("<table border='1'>");
+            document.write("<tr><th>SR NO</th><th>DATE</th><th>DAILY CONFIRMED</th><th>DAILY RECOVERED</th><th>DAILY DEATHS</th><th>TOTAL CONFIRMED</th><th>TOTAL RECOVERED</th><th>TOTAL DEATHS</th></tr>");
+            for(var i=0;i<mydata["cases_time_series"].length;i++){
+                document.write("<tr><td>"+i+"</td><td>"+mydata["cases_time_series"][i]["date"]+"</td><td>"+mydata["cases_time_series"][i]["dailyconfirmed"]+"</td><td>"+mydata["cases_time_series"][i]["dailyrecovered"]+"</td><td>"+mydata["cases_time_series"][i]["dailydeceased"]+"</td><td>"+mydata["cases_time_series"][i]["totalconfirmed"]+"</td><td>"+mydata["cases_time_series"][i]["totalrecovered"]+"</td><td>"+mydata["cases_time_series"][i]["totaldeceased"]+"</td></tr>");
+            }
+        }
+        coviddata();
+    </script>
+</body>
+</html>

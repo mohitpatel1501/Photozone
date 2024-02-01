@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid API 1 | 01 February</title>
+</head>
+<body>
+    <script>
+        async function coviddata(){
+            var mydata=await(await fetch("https://data.covid19india.org/data.json")).json();
+            document.write("<table border='1'>");
+            document.write("<tr><th>SR NO</th><th>STATE NAME</th><th>TOTAL CONFIRMED</th><th>TOTAL RECOVERED</th><th>TOTAL DEATHS</th></tr>");
+            for(var i=0;i<mydata["statewise"].length;i++){
+                document.write("<tr><td>"+i+"</td><td>"+mydata["statewise"][i]["state"]+"</td><td>"+mydata["statewise"][i]["confirmed"]+"</td><td>"+mydata["statewise"][i]["recovered"]+"</td><td>"+mydata["statewise"][i]["deaths"]+"</td></tr>");
+            }
+        }
+        coviddata();
+    </script>
+</body>
+</html>
