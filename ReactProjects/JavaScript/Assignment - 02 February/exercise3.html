@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3 | Assignment</title>
+</head>
+<body>
+    <script>
+        var mydata = [{"Message":"Number of pincode(s) found:4","Status":"Success","PostOffice":[{"Name":"Ashram Road","Description":null,"BranchType":"Sub Post Office","DeliveryStatus":"Non-Delivery","Circle":"Gujarat","District":"Ahmedabad","Division":"Ahmedabad City","Region":"Ahmedabad HQ","Block":"City Ahmedabad","State":"Gujarat","Country":"India","Pincode":"380009"},{"Name":"Darpan Society","Description":null,"BranchType":"Sub Post Office","DeliveryStatus":"Non-Delivery","Circle":"Gujarat","District":"Ahmedabad","Division":"Ahmedabad City","Region":"Ahmedabad HQ","Block":"City Taluka","State":"Gujarat","Country":"India","Pincode":"380009"},{"Name":"Gujarat University","Description":null,"BranchType":"Sub Post Office","DeliveryStatus":"Non-Delivery","Circle":"Gujarat","District":"Ahmedabad","Division":"Ahmedabad City","Region":"Ahmedabad HQ","Block":"Ahmadabad City","State":"Gujarat","Country":"India","Pincode":"380009"},{"Name":"Navrangpura","Description":null,"BranchType":"Head Post Office","DeliveryStatus":"Delivery","Circle":"Gujarat","District":"Ahmedabad","Division":"Ahmedabad City","Region":"Ahmedabad HQ","Block":"Ahmadabad City","State":"Gujarat","Country":"India","Pincode":"380009"}]}];
+
+        // Print status
+        document.write(mydata[0]["Status"]+"<br/>");
+
+        // Print Ashram Road
+        document.write(mydata[0]["PostOffice"][0]["Name"]+"<br/>");
+    </script>
+</body>
+</html>

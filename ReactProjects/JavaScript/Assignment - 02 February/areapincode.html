@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AREA PINCODE | Assignment</title>
+</head>
+
+<body>
+    <form action="">
+        Pincode : <input type="number" name="pin" id="pin" />
+        <button type="submit" id="submit" onclick="getData(this.form); return false;">SUBMIT</button>
+    </form>
+    <p id="msg"></p>
+    <script>
+
+        function getData(form) {
+            let address = "https://api.postalpincode.in/pincode/";
+            let pin = document.getElementById("pin").value;
+            var pincode = String(pin);
+
+            async function load() {
+                var url = address + pincode;
+                var mydata = await (await fetch(url)).json();
+                document.write("Total areas found : " + mydata[0]["PostOffice"].length + "</br>");
+                for (var i = 0; i < mydata[0]["PostOffice"].length; i++) {
+                    document.write(mydata[0]["PostOffice"][i]["Name"] + "</br>");
+                }
+            }
+            load();
+        }
+
+    </script>
+</body>
+
+</html>

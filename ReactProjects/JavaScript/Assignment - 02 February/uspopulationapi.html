@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Population | assignment</title>
+</head>
+<body>
+    <script>
+        async function population(){
+            var mydata=await(await fetch("https://datausa.io/api/data?drilldowns=Nation&measures=Population")).json();
+            document.write("Total number of main keys : "+Object.keys(mydata).length +"<br/>");
+            document.write(Object.keys(mydata)+"<br/>");
+            document.write("<table border='1'><tr><th>SR NO</th><th>YEAR</th><th>POPULATION</th>");
+            for(var i=0;i<mydata["data"].length;i++){
+                document.write("<tr><td>"+[i+1]+"</td><td>"+mydata["data"][i]["Year"]+"</td><td>"+mydata["data"][i]["Population"]+"</td></tr>");
+            }
+            document.write("</table>");
+        }
+        population();
+    </script>
+</body>
+</html>

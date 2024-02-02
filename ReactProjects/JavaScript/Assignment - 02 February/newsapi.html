@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News API | Assignment</title>
+</head>
+<body>
+    <script>
+        async function newsdata(){
+            var mydata =await(await fetch("https://inshortsapi.vercel.app/news?category=sports")).json();
+            document.write("Total number of main keys : "+Object.keys(mydata).length+"</br>");
+            for(var i in mydata){
+                document.write(i+"</br>");
+            }
+            document.write("Total number of news : "+mydata["data"].length+"</br>");
+            document.write("<table border='1'><tr><th>SR NO</th><th>NEWS TITLE</th><th>AUTHOR</th><th>DATE & TIME</th></tr>");
+            for(var i=0;i<mydata["data"].length;i++){
+                document.write("<tr><td>"+[i+1]+"</td><td>"+mydata["data"][i]["title"]+"</td><td>"+mydata["data"][i]["author"]+"</td><td>"+mydata["data"][i]["date"]+" , "+mydata["data"][i]["time"]+"</td></tr>");
+            }
+            document.write("</table>");
+        }
+        newsdata();
+    </script>
+</body>
+</html>
