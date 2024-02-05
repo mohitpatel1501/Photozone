@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News API user input</title>
+</head>
+<body>
+    <script>
+        function check(form){
+            var category=form.ucategory.value;
+
+            async function news(){
+                var url1="https://inshortsapi.vercel.app/news?category=";
+                var url=url1+category;
+                var mydata=await(await fetch(url)).json();
+                for(var i=0;i<mydata["data"].length;i++){
+                    document.getElementById("msg").innerHTML+=mydata["data"][i]["title"]+"<br/>";
+                }
+            }
+            news();
+        }
+    </script>
+    <form action="">
+        Select Category : <select name="ucategory" id="ucat">
+            <option value="sports">Sports</option>
+            <option value="business">Business</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="politics">Politics</option>
+            <option value="startup">Startup</option>
+            <option value="national">National</option>
+        </select>
+        <input type="submit" value="Submit" onclick="check(this.form); return false;"/>
+    </form>
+    <p id="msg"></p>
+</body>
+</html>

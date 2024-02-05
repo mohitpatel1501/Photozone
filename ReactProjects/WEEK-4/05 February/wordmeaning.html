@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word meaning API</title>
+</head>
+<body>
+    <script>
+        function getData(form) {
+            var word = form.word.value;
+
+            async function data() {
+                var url1 = "https://api.dictionaryapi.dev/api/v2/entries/en/";
+                var url = url1 + word;
+                var mydata = await (await fetch(url)).json();
+                document.getElementById("msg").innerHTML="Definition : "+mydata[0]["meanings"][0]["definitions"][0]["definition"]+" , "+mydata[0]["meanings"][0]["definitions"][1]["definition"];
+            }
+            data();
+        }
+    </script>
+    <form action="">
+        Enter Word : <input type="text" name="word" id="uword" />
+        <button type="submit" id="submit" onclick="getData(this.form); return false;">GET MEANING</button>
+    </form>
+    <p id="msg"></p>
+</body>
+
+</html>
