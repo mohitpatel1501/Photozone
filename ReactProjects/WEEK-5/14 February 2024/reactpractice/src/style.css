@@ -1,0 +1,98 @@
+.container{
+    margin: 0;
+    padding: 2px 2px;
+    border: 1px solid black;
+}
+.navbar{
+    background-color: lavender;
+    border: 1 ps solid violet;
+    border-radius: 10px;
+    height: 45px;
+    padding: 5px auto;
+    margin: 5px 5px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Home Page */
+
+.menubox{
+    border: 2px solid blue;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 5px 2px;
+}
+.menubox .logo{
+    height: 90px;
+    width: 20%;
+    border: 1px solid red;
+    text-align: center;
+    margin: 0px 2px;
+    background-color: antiquewhite;
+}
+.menubox .menuitems{
+    height: 90px;
+    border: 1px solid red;
+    text-align: center;
+    margin: 0px 2px;
+    width: 80%;
+    background-color: aquamarine;
+}
+.sliderbox{
+    border: 1px solid green;
+    margin: 5px 0px;
+    text-align: center;
+    height: 200px;
+}
+.contentbox {
+    border: 1px solid violet;
+    margin: 5px 0px;
+    padding: 2px 2px;
+    text-align: center;
+    height: 200px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border: 1px solid blueviolet;
+    padding: 5px 0px;
+}
+.footer-left{
+    width: 33%;
+    border: 1px solid orange;
+    height: 150px;
+    text-align: center;
+}
+.footer-middle{
+    width: 33%;
+    border: 1px solid orange;
+    height: 150px;
+    text-align: center;
+}
+.footer-right{
+    width: 33%;
+    border: 1px solid orange;
+    height: 150px;
+    text-align: center;
+}
+
+/* About Page , Services Page, Products Page*/
+
+.about-industry, .servicesbox, .productsbox, .mapbox{
+    border: 1px solid green;
+    margin: 5px 0px;
+    text-align: center;
+    height: 200px;
+}
+.about-benefits, .testinomialbox, .contactbox{
+    border: 1px solid violet;
+    margin: 5px 0px;
+    padding: 2px 2px;
+    text-align: center;
+    height: 200px;
+}
