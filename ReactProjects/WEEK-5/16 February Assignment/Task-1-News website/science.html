@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style-starter.css">
+    
+    <title>News website</title>
+</head>
+<body>
+    <script>
+        async function fetchdata() {
+          var mydata = await (await fetch("https://inshortsapi.vercel.app/news?category=science")).json();
+          
+          for (var i = 0; i < mydata["data"].length; i++) {
+            document.getElementById("card-data").innerHTML +=`
+            <div class=" col-md-4 d-flex flex-col mx-auto">
+                <div class="grids5-info">
+                  <a href="" class="d-block zoom"><img src="${mydata.data[i]["imageUrl"]}" alt="" class=" news-image" height="320px" /></a>
+                  <div class="blog-info">
+                    <h4><a href="">${mydata.data[i]["title"]}</a></h4>
+                    <p class="date"><span class="fa fa-calendar mr-2"></span> ${mydata.data[i]["date"]}</p>
+                    <p style="height:60px; line-height:20px; overflow:hidden;display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">${mydata.data[i]["content"]}</p>
+                    <a href="${mydata.data[i]["readMoreUrl"]}" class="btn btn-news mt-4">Read More</a>
+                  </div>
+                </div>
+              </div>`;
+        }
+    }
+    fetchdata();
+  </script>
+
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark stroke bg-secondary px-3">
+                <h1><a class="navbar-brand" href="index.html">
+                    News 24*7
+                    </a></h1>
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                    </span>
+                </button>
+      
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-auto mr-5">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="national.html">National</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="science.html">Science</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="politics.html">Politics</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+      </header>
+
+    <div class="w3l-news" id="news">
+        <div id="grids5-block" class="py-5">
+          <div class="container py-lg-5 py-md-0 py-2">
+            <h3 class="title-big text-center">Science</h3>
+            <div class="d-flex flex-row">
+                <div class="row mt-lg-5 mt-4 mx-auto" id="card-data">
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <script src="js/jquery-3.3.1.min.js"></script> <!-- Common jquery plugin -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(window).on("scroll", function () {
+          var scroll = $(window).scrollTop();
+    
+          if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+          } else {
+            $("#site-header").removeClass("nav-fixed");
+          }
+        });
+    
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+          $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+          if ($(window).width() > 991) {
+            $("header").removeClass("active");
+          }
+          $(window).on("resize", function () {
+            if ($(window).width() > 991) {
+              $("header").removeClass("active");
+            }
+          });
+        });
+      </script>
+</body>
+</html>
