@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
     
 
@@ -6,9 +8,7 @@ export default function Header() {
             <header id="site-header" className="fixed-top">
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-dark stroke">
-                        <h1><a className="navbar-brand" href="index.html">
-                            Web service
-                        </a></h1>
+                        <h1><Link className="navbar-brand" to='/'> Web service</Link></h1>
                         <button className="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
                             data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -19,16 +19,16 @@ export default function Header() {
                         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                             <ul className="navbar-nav ml-auto mr-5">
                                 <li className="nav-item active">
-                                    <a className="nav-link" href="index.html">Home <span className="sr-only">(current)</span></a>
+                                    <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
                                 </li>
                                 <li className="nav-item @@about__active">
-                                    <a className="nav-link" href="about.html">About</a>
+                                    <Link className="nav-link" to="/about">About</Link>
                                 </li>
                                 <li className="nav-item @@services__active">
-                                    <a className="nav-link" href="services.html">Services</a>
+                                    <Link className="nav-link" to="/services">Services</Link>
                                 </li>
                                 <li className="nav-item @@contact__active">
-                                    <a className="nav-link" href="contact.html">Contact</a>
+                                    <Link className="nav-link" to="/contact">Contact</Link>
                                 </li>
                                 <nav className="ml-lg-3">
                                     <div className="search-bar">
